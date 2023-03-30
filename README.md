@@ -24,7 +24,8 @@
 
    执行：app的主NavGraph动态创建，将lib的NavGraph对象所有destination和action都转移到app的NavGraph中；相当于将lib的nav内容平移到app的nav。
 
-   ![1](https://user-images.githubusercontent.com/12827988/228725501-714a1fc3-dfbc-4527-b747-9b69653b7abe.png)
+
+![4](https://user-images.githubusercontent.com/12827988/228741330-06a5f392-71c3-4409-ae87-e82c215a38dc.png)
 
 ![1 (1)](https://user-images.githubusercontent.com/12827988/228725544-9f275ab6-7907-4227-8d36-c1129bec8251.png)
 
