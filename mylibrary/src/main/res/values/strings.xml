@@ -1,0 +1,5 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello lib fragment</string>
+    <string name="hello_blank2_fragment">Hello lib2 fragment</string>
+</resources>

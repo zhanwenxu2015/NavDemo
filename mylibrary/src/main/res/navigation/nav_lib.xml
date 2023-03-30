@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_lib"
+    app:startDestination="@id/libFragment">
+
+    <fragment
+        android:id="@+id/libFragment"
+        android:name="com.example.mylibrary.LibFragment"
+        android:label="fragment_lib"
+        tools:layout="@layout/fragment_lib" />
+    <fragment
+        android:id="@+id/lib2Fragment"
+        android:name="com.example.mylibrary.Lib2Fragment"
+        android:label="fragment_lib2"
+        tools:layout="@layout/fragment_lib2" >
+        <argument
+            android:name="fromLib"
+            app:argType="boolean"/>
+    </fragment>
+    <action
+        android:id="@+id/action_libFragment_to_lib2Fragment"
+        app:destination="@id/lib2Fragment">
+    </action>
+    <action
+        android:id="@+id/action_to_libFragment"
+        app:destination="@id/libFragment">
+    </action>
+</navigation>

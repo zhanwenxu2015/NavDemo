@@ -1,0 +1,211 @@
+/**
+ * 版本
+ */
+ext {
+    //用来切换组件和app的开关，设置成true则是独立运行app，否则则是lib被依赖
+    isVideoCallApp = false
+    gradle_version = '4.1.0'
+    kotlin_version = "1.4.31"
+    koin_version = '2.2.2'
+    kotlinx_coroutines_android = "1.4.0"
+
+    compile_sdk_version = 31
+    build_tools_version = "30.0.3"
+    min_sdk_version = 21
+    target_sdk_version = 31
+
+    androidx_appcompat_version = "1.3.0"
+    androidx_constraintlayout_version = "2.0.4"
+    androidx_core_ktx_version = "1.5.0"
+    androidx_exifinterface_version = "1.3.2"
+    material_version = "1.3.0"
+
+    retrofit2_version = "2.9.0"
+    okhttp3_version = "4.9.1"
+    gson_version = "2.8.6"
+
+    navigation_version = "2.3.3"
+
+    zxing_android_embedded_version = "4.2.0"
+    zxing_core_version = "3.3.3"
+
+    mmkv_version = "1.2.7"
+    exoplayer_version = "2.13.2"
+    glide_version = "4.11.0"
+    glide_transformations_version = "3.3.0"
+    jp_wasabeef_glide_transformations_version = "4.3.0"
+    swipe_refresh_layout_version = "1.1.0"
+
+    archives_version = "0.0.8"
+    archives_player_version = archives_version
+    activity_version = "1.1.0"
+    archives_fit_version = archives_version
+    arouter_api_version = "1.5.0"
+    arouter_compiler_version = "1.2.2"
+    arouter_register_version = "1.0.2"
+    coroutines_version = "1.4.1"
+    crypto_version = "1.6.1"
+    dagger_version = "2.16"
+    dataStore_version = "1.0.0-alpha05"
+    debug_db_version = "1.0.6"
+    espresso_version = "3.2.0"
+    eventbus_version = "3.2.0"
+    grpc_version = "0.8.8"
+    lifecycle_version = "2.2.0"
+    localbroadcastmanager_version = "1.0.0"
+    lottie_version = "2.5.4"
+    junit_version = "4.12"
+    media_version = "1.1.1"
+    msbc_version = "1.0.0"
+    multidex_version = "2.0.1"
+    fragment_ktx_version = '1.1.0'
+    fragment_version = '1.2.0-rc04'
+    okdownload_version = "1.0.7"
+    opus_version = "1.0.3"
+    probe_version = "1.0.4.7"
+    protobuf_version = "3.11.0"
+    recyclerview_version = "1.1.0"
+    resampler_version = "1.0.2"
+    room_version = "2.3.0"
+    runner_version = "1.2.0"
+//    support_version = "1.1.0"
+    tr_register_version = '1.0.0'
+    viewpager2_version = "1.0.0"
+    voice_sdk_version = "1.5.1"
+    work_version = "2.4.0"
+    gson_version = "2.8.1"
+    support_annotations_version = "28.0.0"
+    lottie_version = "3.7.0"
+    live_event_bus_version = "1.7.3"
+    ucrop_version = "2.2.7"
+
+    //作业帮基础库相关
+    lib_release_push_version = "3.5.9.1.2"
+    lib_push_version = "0.0.5.9"
+    // 基础库，网络，gson，各种基础工具库  升级lib_common_version 后要检查 UGlideModule使用状态，不可用联系 杨拓
+    lib_common_version = "0.7.5-rc-1"
+    lib_launch_manager_version = "0.0.8"
+    lib_host_switch_version = "0.0.11"
+    lib_cuid_version = "1.3.0"
+    lib_zyb_okhttp_version = "0.0.10"
+    lib_baseutil_version = "0.0.3"
+    lib_common_api_version = "0.0.13"
+    lib_httpcore_version = "4.4.10"
+    lib_httpmime_version = "4.5.6"
+    lib_httpclient_version = "4.5.6"
+    lib_pay_version = "1.0.0-rc8"
+    lib_hybrid_version = "0.7.10-rc-6"
+    lib_zyb_design_version = "0.9.6.5-rc6"
+    linkface_release_sdk_version = "sy_3.0.10"
+    // 全埋点sdk版本号
+    nlog_version = "0.6.4-beta-1"
+
+    //火山APM插件版本号
+    classpath_apm_insight_plugin_version = "1.4.1"
+    //apm性能组件版本号
+    apm_insight_plugin_version = "1.4.5.cn-rc.0"
+    //apm稳定性组件版本号
+    apm_insight_crash_version = "1.4.1"
+    rangers_appLog_version = "5.5.6"
+    xiaomi_oauth_version = "2.0.10"
+
+    okdownload_version = "1.0.7"
+
+    permissionsdispatcher_version = "4.8.0"
+
+    agora_version = "3.4.7"
+
+    rxjava2_version = "2.1.14"
+    rxandroid_version = "2.0.2"
+
+    cymchad_version="3.0.4"
+
+    homework_anno_version="0.2.0-rc1"// 注解处理库
+    homework_anno_api_version="0.2.0-rc1"//注解api库
+    common_page_version="0.6.1"//common_page
+    lib_zyb_adid="0.1.0-rc3"//lib_zyb_adid
+    lib_zyb_device="0.4.0-rc1"//lib_zyb_adid
+    lib_baidu_lbs="7.5.4"//lib_zyb_adid
+    lib_ant="1.8.3"//lib_zyb_adid
+}
+
+/**
+ * 仓库
+ */
+static def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.jcenter()
+//    handler.mavenLocal()
+
+    handler.maven {
+        url 'https://developer.huawei.com/repo/'
+    }
+
+    handler.maven {
+        url 'https://artifact.bytedance.com/repository/Volcengine/'
+    }
+
+    handler.maven {
+        url "https://artifact.bytedance.com/repository/byteX/"
+    }
+
+    handler.maven {
+        url 'http://nexus.zuoyebang.cc/nexus/content/repositories/homework_release/'
+        credentials {
+            username 'homework'
+            password 'home666'
+        }
+    }
+    handler.maven {
+        url 'http://nexus.zuoyebang.cc/nexus/content/repositories/homework/'
+        credentials {
+            username 'homework'
+            password 'home666'
+        }
+    }
+
+    handler.maven {
+        url 'http://nexus.zuoyebang.cc/nexus/content/repositories/homework_gray/'
+        credentials {
+            username 'homework'
+            password 'home666'
+        }
+    }
+    handler.maven { url 'https://jitpack.io' }
+
+    handler.mavenCentral()
+
+    //添加阿里云镜像
+    handler.maven { url "https://maven.aliyun.com/repository/public" }
+    handler.maven { url "https://maven.aliyun.com/repository/google" }
+    handler.maven { url "https://maven.aliyun.com/repository/jcenter" }
+}
+
+ext.addRepos = this.&addRepos
+
+//为Room添加Kapt
+@SuppressWarnings("GrMethodMayBeStatic")
+def addRoomKapt(DependencyHandler handler) {
+    handler.add("kapt", "androidx.room:room-compiler:$room_version")
+}
+
+ext.addRoomKapt = this.&addRoomKapt
+
+//为Dagger 添加Kapt
+@SuppressWarnings("GrMethodMayBeStatic")
+def addDaggerKapt(DependencyHandler handler) {
+    handler.add("kapt", "com.google.dagger:dagger-compiler:$dagger_version")
+    handler.add("kapt", "com.google.dagger:dagger-android-processor:$dagger_version")
+}
+
+ext.addDaggerKapt = this.&addDaggerKapt
+
+// 添加所有可能需要用的kapt
+@SuppressWarnings("GrMethodMayBeStatic")
+def addKapt(DependencyHandler handler) {
+    handler.add("kapt", "androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
+    handler.add("kapt", "androidx.room:room-compiler:$room_version")
+//    handler.add("kapt", "com.alibaba:arouter-compiler")
+}
+
+ext.addKapt = this.&addKapt

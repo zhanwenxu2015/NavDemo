@@ -1,0 +1,6 @@
+rootProject.name = "NavDemo"
+include ':app'
+include ':mylibrary'
+include ':mylibrary2'
+include ':lib-api'
+include ':lib2-api'
